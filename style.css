@@ -1,0 +1,142 @@
+body{
+    h1{
+        text-align: center;
+    }
+}
+
+.wrapper2{
+    display: flex;
+    justify-content: center;
+}
+#wrapper{
+    width: 14px; /* + 64 times columns */
+    height: 126; /* + 64 times rows */
+    border: 15px solid black;
+}
+.grid{
+    display: grid;
+    justify-content: center;
+    border: 15px solid black;
+    /* Auto-fit columns that are at least 100px wide, scaling evenly */
+    /* Space between buttons */
+    gap: 0px;
+    padding: 0px;
+    button{
+        width: 64px;
+        height: 64px;
+        cursor: pointer;
+        padding: 0px;
+        background: none;
+        border: none;
+        img{
+            background-image: url("./media/sprite100.gif");
+            transform: scale(4);
+            transform-origin: left;
+            background-repeat: no-repeat;
+            image-rendering: pixelated;
+            image-rendering: crisp-edges;
+            width: 16px;
+            height: 16px;
+            background-position: 0px -39px;
+            display: block;
+            /* justify-content: center; */
+        }
+        img:active{
+            width: 16px; height: 16px; background-position: 0px -23px;
+        }
+    }
+}
+.inputs{
+    display: flex;
+    gap: 20em;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.bomb-class{
+    display: flex;
+    gap: 4em;
+    justify-content: center;
+}
+
+#row-group{
+    display: inline-block;
+    border: 5px solid black;
+    padding: -10px;
+    input{
+        display: inline-block;
+        text-align: center;
+        height: 2em;
+        font-size: 1em;
+        width: 100px;
+    }
+    h3{
+        display: inline-block;
+    }
+}
+#col-group{
+    display: inline-block;
+    border: 5px solid black;
+    input{
+        display: inline-flex;
+        text-align: center;
+        height: 2em;
+        font-size: 1em;
+        width: 100px;
+    }
+    h3{
+        display: inline-flex;
+    }
+}
+
+#bomb-group{
+    display: inline-block;
+    border: 5px solid black;
+    input{
+        display: inline-flex;
+        text-align: center;
+        height: 2em;
+        font-size: 1em;
+        width: 100px;
+    }
+    h3{
+        display: inline-flex;
+    }
+}
+/*.smiley-class{*/
+#smiley{
+    display: flex;
+    justify-self: center;
+    background-image: url("./media/sprite100.gif");
+    transform: scale(4);
+    transform-origin: top;
+    width: 26px;
+    height: 26px;
+    background-position: 0px -55px;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    margin-bottom: 6px;
+}
+#smiley:active{
+    background-position: -26px -55px;
+}
+/*}*/
+
+/*
+#test-display{
+    display:flex;
+    justify-self: center;
+    width: 10px;         /* Width of a single frame *//*
+    height: 32px;        /* Height of a single frame *//*
+    /*background-image: url("./media/sprite100.gif");*//*
+    background-image: none;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    transform: scale(4);
+    transform-origin: center;
+    background-position: -134px -39px; /* Each number is 13 width *//*
+}
+*/
+
+/* 18 x 32 grid */

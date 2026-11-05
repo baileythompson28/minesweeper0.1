@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Minesweeper</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/x-icon" href="./media/flag.gif">
+    </head>
+    <body>
+        <h1>MineSweeper</h1>
+
+        <br/>
+        <br/>
+
+        <h3 id="recommended">Recommended Mines (based on selected rows/ columns): </h3>
+        <p>(recommended that you zoom out to 65% when board is near 20x20)</p>
+
+        <div class="inputs">
+            <div id="row-group">
+                <h3>Rows: </h3>
+                <input id="rows" type="number" max="20" min="4">
+            </div>
+                           <!-- FIND A WAY TO STYLE THESE -->
+            <div id="col-group">
+                <h3>Columns: </h3>
+                <input id="cols" type="number" max="20" min="4">
+            </div>
+        </div>
+        
+        <div class="bomb-class">
+            <div id="bomb-group">
+                <h3>Mines: </h3>
+                <input id="bombs" type="number" max="391" min="1">
+            </div>
+        </div>
+
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+
+        <div class="wrapper3">
+            <div class="wrapper2">
+                <div id="wrapper">
+                    <div id="smiley"></div>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    
+                    <div class="grid">
+                        <!--BUTTONS AND IMG HERE-->
+                        <!-- <button id="button1"><img id="img1" src="" alt=""></button> -->
+                        <!--<button id="button1"><img id="img1" src="" alt=""></button>
+                        <button id="button2"><img id="img2" src="" alt=""></button>
+                        <button id="button3"><img id="img3" src="" alt=""></button>
+                        <button id="button4"><img id="img4" src="" alt=""></button>
+                        <button id="button5"><img id="img5" src="" alt=""></button>
+                        <button id="button6"><img id="img6" src="" alt=""></button>
+                        <button id="button7"><img id="img7" src="" alt=""></button>
+                        <button id="button8"><img id="img8" src="" alt=""></button>
+                        <button id="button9"><img id="img9" src="" alt=""></button>
+                        <button id="button10"><img id="img10" src="" alt=""></button>
+                        <button id="button11"><img id="img11" src="" alt=""></button>
+                        <button id="button12"><img id="img12" src="" alt=""></button>
+                        <button id="button13"><img id="img13" src="" alt=""></button>
+                        <button id="button14"><img id="img14" src="" alt=""></button>
+                        <button id="button15"><img id="img15" src="" alt=""></button>
+                        <button id="button16"><img id="img16" src="" alt=""></button>
+                        <button id="button17"><img id="img17" src="" alt=""></button>
+                        <button id="button18"><img id="img18" src="" alt=""></button>
+                        <button id="button19"><img id="img19" src="" alt=""></button>
+                        <button id="button20"><img id="img20" src="" alt=""></button>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        <h3>Please reset by pressing the smiley to load changes rows, columns, or mines on the board.</h3>
+
+        </div>
+        <script src="index.js"></script>
+
+        <!--<script>
+            const reset=document.getElementById("reset");
+
+            reset.onClick=function(){
+                location.reload();
+            }
+        </script>-->
+        
+    </body>
+</html>
