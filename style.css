@@ -1,6 +1,10 @@
 body{
+    background-image: url("./media/background.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
     h1{
         text-align: center;
+        margin-bottom:78px;
     }
 }
 
@@ -50,18 +54,19 @@ body{
     display: flex;
     gap: 20em;
     justify-content: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 .bomb-class{
     display: flex;
-    gap: 4em;
     justify-content: center;
+    margin-bottom: 50px;
 }
 
-#row-group{
+
+.user-input-group{
     display: inline-block;
     border: 5px solid black;
-    padding: -10px;
+    padding: 5px;
     input{
         display: inline-block;
         text-align: center;
@@ -73,35 +78,8 @@ body{
         display: inline-block;
     }
 }
-#col-group{
-    display: inline-block;
-    border: 5px solid black;
-    input{
-        display: inline-flex;
-        text-align: center;
-        height: 2em;
-        font-size: 1em;
-        width: 100px;
-    }
-    h3{
-        display: inline-flex;
-    }
-}
 
-#bomb-group{
-    display: inline-block;
-    border: 5px solid black;
-    input{
-        display: inline-flex;
-        text-align: center;
-        height: 2em;
-        font-size: 1em;
-        width: 100px;
-    }
-    h3{
-        display: inline-flex;
-    }
-}
+
 /*.smiley-class{*/
 #smiley{
     display: flex;
@@ -115,7 +93,7 @@ body{
     background-repeat: no-repeat;
     image-rendering: pixelated;
     image-rendering: crisp-edges;
-    margin-bottom: 6px;
+    margin-bottom: 78px;
 }
 #smiley:active{
     background-position: -26px -55px;
