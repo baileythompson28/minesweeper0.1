@@ -1,10 +1,24 @@
-body{
+* {
+    box-sizing: border-box;
+}
+
+body {
     background-image: url("./media/background.webp");
     background-size: cover;
     background-repeat: no-repeat;
-    h1{
+    background-color: #0055aa;
+    font-family: 'MS Sans Serif', Tahoma, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
         text-align: center;
-        margin-bottom:78px;
+        color: white;
+        text-shadow: 2px 2px #000;
     }
 }
 
@@ -12,17 +26,20 @@ body{
     display: flex;
     justify-content: center;
 }
-#wrapper{
-    width: 14px; /* + 64 times columns */
-    height: 126; /* + 64 times rows */
-    border: 15px solid black;
+
+#wrapper {
+    background-color: #c0c0c0;
+    border: 3px solid;
+    border-color: #ffffff #404040 #404040 #ffffff;
+    padding: 8px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
+    width: fit-content;
 }
+
 .grid{
     display: grid;
     justify-content: center;
     border: 15px solid black;
-    /* Auto-fit columns that are at least 100px wide, scaling evenly */
-    /* Space between buttons */
     gap: 0px;
     padding: 0px;
     button{
@@ -43,7 +60,6 @@ body{
             height: 16px;
             background-position: 0px -39px;
             display: block;
-            /* justify-content: center; */
         }
         img:active{
             width: 16px; height: 16px; background-position: 0px -23px;
@@ -80,7 +96,6 @@ body{
 }
 
 
-/*.smiley-class{*/
 #smiley{
     display: flex;
     justify-self: center;
@@ -98,23 +113,3 @@ body{
 #smiley:active{
     background-position: -26px -55px;
 }
-/*}*/
-
-/*
-#test-display{
-    display:flex;
-    justify-self: center;
-    width: 10px;         /* Width of a single frame *//*
-    height: 32px;        /* Height of a single frame *//*
-    /*background-image: url("./media/sprite100.gif");*//*
-    background-image: none;
-    background-repeat: no-repeat;
-    image-rendering: pixelated;
-    image-rendering: crisp-edges;
-    transform: scale(4);
-    transform-origin: center;
-    background-position: -134px -39px; /* Each number is 13 width *//*
-}
-*/
-
-/* 18 x 32 grid */
