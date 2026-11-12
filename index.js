@@ -4,8 +4,8 @@ const bombsBox=document.getElementById("bombs");
 const rec=document.getElementById("recommended");
 const border=document.getElementById("wrapper");
 const grid=document.getElementsByClassName("grid")[0];
-//const smileyContainer=document.getElementById("smiley-container");
 const smiley=document.getElementById("smiley");
+
 let firstClick=false;
 let outcome="neutral";
 let touchingSmiley=false;
@@ -73,32 +73,15 @@ class Space{
 
         this.#buttonElement=document.createElement("button");  // makes the button
         this.#buttonElement.id=`button${this.index+1}`;  //sets button id to "button{index}"
-        //this.#buttonElement.style=`
-        //    width: 64px;
-        //    height: 64px;
-        //    cursor: pointer;
-        //    padding: none;
-        //    background: none;
-        //    border: none;
-        //    img{
-        //        ${this.style} background-image: url("./media/sprite100.gif"); background-repeat: no-repeat; image-rendering: pixelated; image-rendering: crisp-edges; width: 16px; height: 16px; background-position: 0px -39px; display: block;
-        //    }
-        //`;
 
         this.#imgElement=document.createElement("img");
         this.#imgElement.id=`img${this.index+1}`;
         this.#imgElement.src="";
         this.#imgElement.alt="";
-        //this.#imgElement.style=`${this.style} background-image: url("./media/sprite100.gif"); background-repeat: no-repeat; image-rendering: pixelated; image-rendering: crisp-edges; width: 16px; height: 16px; background-position: 0px -39px; display: block;`;
-
         this.#buttonElement.append(this.#imgElement);
 
         this.#buttonElement.addEventListener("click", () => this.gridClicked());
         this.#buttonElement.addEventListener("contextmenu", (e)=>this.gridRightClicked(e));
-
-        //this.#buttonElement.push(this.#imgElement);
-        //grid.push(this.#buttonElement);
-
     }
     
     get button(){
@@ -138,8 +121,6 @@ class Space{
                 this.#imgElement.style=freeSpace;
                 this.isFlagged=false;
             }
-
-            //this.alt="N";
         }
     }
 
@@ -243,31 +224,6 @@ class Space{
     }
 }
 
-
-/*                                         display numbers
-button.onclick=function(){
-    if(num1=="-"){
-        num1=(-1);
-    }
-    num1+=1;
-    if(num1==10){
-        num1="-";
-    }
-    testDis.style=displayNumbers[num1];
-}
-*/
-
-/*                                          warning numbers
-button.onclick=function(){
-    num1+=1;
-    if(num1==9){
-        num1=0;
-    }
-    testDis.style=warningNumbers[num1];
-    }
-    */
-
-
 let spaces=[]
 let rows, cols, bombCount, lefts, tops, rights, bottoms, first;
 
@@ -292,7 +248,6 @@ function reset(){
     border.style=`width: ${borderWidth+14}px; height: ${borderHeight+126}px;`
 
     moves=0;
-    //setInitialSmileyStyle();
     smiley.style=`#smiley{${loseSmiley}} #smiley:active{${clickedSmiley}}`;
     firstClick=false;
     outcome="neutral";
@@ -368,7 +323,7 @@ bombsBox.onchange=function(){
 
 getRec();
 function getRec(){
-    rec.innerHTML=`Recommended Mines (based on selected rows/ columns): <u>${Math.round((Number(rowsBox.value)*Number(colsBox.value))*0.12345)}</u>`;
+    rec.innerHTML=`Recommended Mines: <u>${Math.round((Number(rowsBox.value)*Number(colsBox.value))*0.12345)}</u>`;
 }
 
 
@@ -507,9 +462,6 @@ function lose(clickedOne){
     if(outcome=="neutral"){
         outcome="lose";
         smiley.style=loseSmiley;  //Why does this one work?
-        //smiley.style=`#smiley{${loseSmiley}} #smiley:active{${clickedSmiley}}`;  //But this one doesnt?
-        //smiley.style=`#smiley{${defaultSmiley}} #smiley:active{${clickedSmiley}}`;  //Even though this one does?
-
         for(thing in spaces){
             if(spaces[thing].isMine==true&&spaces[thing]!=clickedOne){
                 if(spaces[thing].isFlagged){
@@ -534,7 +486,6 @@ function win(){
         if(outcome=="neutral"){
             outcome="win";
             smiley.style=winSmiley;         // add console.log stuff for every possible point that smiley.style is set back to  default in previous code --> console.log("smiley.style set to defalt and clicked when clicked");
-            //smiley.style=`#smiley{${winSmiley}} #smiley:active{${clickedSmiley}}`;
         }
         for(thing in spaces){
             if(spaces[thing].isFlagged==false&&spaces[thing].isMine==true){
